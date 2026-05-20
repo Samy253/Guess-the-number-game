@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guess the Number</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Guess the Number</h1>
+    <p class="range-label">Guess a number between 1 and 100</p>
+
+    <div class="stats">
+      <p>Attempts used: <span id="attempts-used">0</span></p>
+      <p>Attempts remaining: <span id="attempts-left">10</span></p>
+    </div>
+
+    <p id="feedback">Enter your first guess...</p>
+
+    <p >Previous Guesses: <span class="guesses">None yet</span></p>
+    <div class="lowOrHi" ></div>
+    <div class="input-group">
+      <input type="number" id="guess-input" min="1" max="100" placeholder="Your guess" />
+      <button id="guess-btn">Guess</button>
+    </div>
+
+    <button id="reset-btn">Play Again</button>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
