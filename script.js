@@ -9,7 +9,7 @@ const lowOrHi=document.querySelector('.lowOrHi');
 let playGame=true;
 let numGuess=0;
 let prevGuess=[];
-
+displayMessage('Enter your first guess...');
 if(playGame){
     submit.addEventListener('click',function(e){
         e.preventDefault();
@@ -68,7 +68,7 @@ function endGame(){
     userInput.value='';
     userInput.setAttribute('disabled','');
     playGame=false;
-    
+    document.querySelector('#reset-btn').style.display='block';
 }
 newGame();
 
@@ -77,15 +77,15 @@ function newGame(){
     newGameButton.addEventListener('click',function(e){
         randomNumber=parseInt(Math.random()*100+1);
         prevGuess=[];
-        numGuess=1;
-        guessSlot.innerHTML='';
+        numGuess=0;
+        guessSlot.innerHTML='None yet';
         remaining.innerHTML=10;
         attempted.innerHTML=0;
         lowOrHi.innerHTML='';
         userInput.value='';
         userInput.removeAttribute('disabled');
         displayMessage('Enter your first guess...');
-
+        document.querySelector('#reset-btn').style.display='none';
         playGame=true;
-    })
+    });
 }
